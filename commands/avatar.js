@@ -5,11 +5,11 @@ module.exports = {
 	// cooldown: 5,
 	execute(message, args) {
 		if (!message.mentions.users.size) {
-            return message.channel.send(`ye le tera dp < ${message.author.displayAvatarURL({ format: "png", dynamic: true })} >`);
+            return message.channel.send(`ye le tera dp:\n  ${message.author.displayAvatarURL({ format: "png", dynamic: true })}`);
         }
 
         const avatarList = message.mentions.users.map(user => {
-		    return `${user.username} ka dp: < ${user.displayAvatarURL({ format: "png", dynamic: true })} >`;
+		    return `${user.username} ka dp:\n ${user.displayAvatarURL({ format: "png", dynamic: true })} `;
         });
         
         message.channel.send(avatarList);
