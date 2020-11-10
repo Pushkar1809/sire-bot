@@ -1,12 +1,12 @@
 module.exports = {
     name: 'hata',
     description: 'prune',
+    args: true,
+    usage: '<amount>',
     execute(message, args) {
         const amount = parseInt(args[0]) + 1;
 
-        if (isNaN(amount)) {
-            return message.reply('number dal bc.');
-        } else if (amount < 1 || amount > 99) {
+        if (amount < 1 || amount > 99) {
             return message.reply('you need to input a number between 1 and 99.');
         }
 
