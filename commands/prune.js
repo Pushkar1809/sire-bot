@@ -1,6 +1,8 @@
 module.exports = {
-    name: 'hata',
+    name: 'prune',
+    aliases: ['hata', 'del', 'purge'],
     description: 'prune',
+    // cooldown: 5,
     args: true,
     usage: '<amount>',
     execute(message, args) {
